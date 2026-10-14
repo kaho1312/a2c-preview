@@ -13,7 +13,7 @@ function bg(){
  'for(float i=1.;i<8.;i++){uv.x+=.55/i*cos(i*2.3*uv.y+tt+i*1.7);uv.y+=.55/i*cos(i*1.7*uv.x+tt*1.3);}'+
  'float a=.5+.5*sin(uv.x+uv.y),b=.5+.5*cos(uv.y*1.3-tt),c2=.5+.5*sin(uv.x*.8+tt*.7);'+
  'vec3 col=mix(vec3(.02,.03,.06),vec3(.18,.85,.75),a*b*.85);col=mix(col,vec3(.42,.5,1.),c2*.45*(1.-a));col=mix(col,vec3(.62,.38,.95),pow(b,4.)*.4);'+
- 'float h=pow(abs(sin(uv.x*1.5+uv.y)),12.);col+=h*.25;col*=.55;gl_FragColor=vec4(col,1.);}';
+ 'float h=pow(abs(sin(uv.x*1.5+uv.y)),12.);col+=h*.25;col*=.9;gl_FragColor=vec4(col,1.);}';
  function sh(ty,s){var o=gl.createShader(ty);gl.shaderSource(o,s);gl.compileShader(o);return o}
  var pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);
  if(!gl.getProgramParameter(pr,gl.LINK_STATUS)){c.remove();return}
