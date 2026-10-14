@@ -47,3 +47,10 @@ strong{color:var(--t)}
 @media(min-width:760px){.links{display:flex}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.step{flex-direction:column}.card{padding:2.1rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.split .ch,.blur-in,.js .reveal{opacity:1!important;filter:none!important;transform:none!important}}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.card,header{background:rgba(14,18,28,.92)}}
+/* Haikei-style generative SVG layers (generated in code, see fx/) */
+.hero{position:relative;overflow:hidden}.hero .w{position:relative;z-index:1}
+.blobscene{position:absolute;inset:-10% -10% auto auto;width:min(1100px,140vw);opacity:.7;pointer-events:none;mix-blend-mode:screen;animation:drift 24s ease-in-out infinite alternate}
+.blob{position:absolute;right:-8%;bottom:4%;width:min(460px,70vw);opacity:.8;pointer-events:none;animation:spin 60s linear infinite}
+@keyframes drift{to{transform:translate(-4%,6%) scale(1.06)}}@keyframes spin{to{transform:rotate(360deg)}}
+.divider{line-height:0;margin:-1px 0;pointer-events:none}.divider img{display:block;width:100%;height:clamp(60px,10vw,160px)}
+#como,#contacto{background:radial-gradient(80% 60% at 50% 0,rgba(122,167,255,.08),transparent 70%)}
