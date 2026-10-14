@@ -1,0 +1,49 @@
+:root{--bg:#05070d;--t:#eef3f8;--m:#9aa8b8;--c1:#5ef0d0;--c2:#7aa7ff;--c3:#c08bff;--glass:rgba(255,255,255,.055);--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;font-family:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--t);line-height:1.6;background:var(--bg);-webkit-font-smoothing:antialiased;letter-spacing:-.005em}
+a{color:var(--c1)}img,svg{max-width:100%}
+#bg,.bg-fallback{position:fixed;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none}
+.bg-fallback{z-index:-3;background:radial-gradient(60% 50% at 20% 10%,#0f5f63 0,transparent 60%),radial-gradient(50% 45% at 85% 20%,#2a2f7a 0,transparent 60%),radial-gradient(60% 50% at 50% 100%,#3b1d5e 0,transparent 65%),var(--bg)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(5,7,13,.15),rgba(5,7,13,.55) 55%,rgba(5,7,13,.85))}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:#000;color:#fff;padding:.5rem;z-index:9}
+.w{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+header{position:sticky;top:0;z-index:5;background:rgba(5,7,13,.45);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:64px}
+.logo{font-weight:800;font-size:1.35rem;text-decoration:none;letter-spacing:-.03em;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:none;gap:1.6rem}.links a{text-decoration:none;color:var(--m);font-size:.95rem;transition:color .2s}.links a:hover{color:var(--t)}
+.lang{border:1px solid var(--line);background:var(--glass);color:var(--t);font-weight:600;border-radius:999px;padding:.4rem 1rem;cursor:pointer;font-size:.85rem;backdrop-filter:blur(8px)}
+.lang:hover{border-color:var(--c1)}
+.lang:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid var(--c1);outline-offset:3px}
+.hero{padding:4.5rem 0 4rem;min-height:calc(100svh - 64px);display:flex;align-items:center}
+h1{font-size:clamp(2.2rem,7.5vw,4.6rem);line-height:1.04;letter-spacing:-.035em;font-weight:700;margin:1rem 0 1.25rem;max-width:15em}
+h2{font-size:clamp(1.7rem,4.5vw,2.8rem);letter-spacing:-.03em;line-height:1.1;margin:0 0 1.5rem;font-weight:700}
+h3{letter-spacing:-.015em}
+.lead{font-size:clamp(1.05rem,2.2vw,1.25rem);color:var(--m);max-width:38em;margin-bottom:2rem}
+.tag{display:inline-block;background:var(--glass);border:1px solid var(--line);border-radius:999px;padding:.3rem .9rem;font-size:.8rem;color:var(--c1);backdrop-filter:blur(8px);letter-spacing:.02em}
+.btn{position:relative;display:inline-flex;align-items:center;gap:.55rem;color:#04110f;text-decoration:none;font-weight:700;padding:.95rem 1.5rem;border-radius:999px;margin:.4rem .5rem 0 0;background:linear-gradient(100deg,var(--c1),var(--c2) 60%,var(--c3));background-size:200% 100%;box-shadow:0 0 0 1px rgba(255,255,255,.15) inset,0 8px 30px -6px rgba(94,240,208,.55);transition:box-shadow .3s,background-position .6s;will-change:transform}
+.btn:hover{background-position:100% 0;box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 10px 44px -4px rgba(122,167,255,.8)}
+.btn.o{background:var(--glass);color:var(--t);border:1px solid var(--line);box-shadow:none;backdrop-filter:blur(10px)}
+.btn.o:hover{border-color:var(--c1)}
+section{padding:5rem 0}
+.grid{display:grid;gap:1.25rem}
+.card{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:22px;padding:1.75rem;backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 20px 50px -20px rgba(0,0,0,.6);overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(94,240,208,.14),transparent 45%)}
+.card h3{margin:.75rem 0 .5rem;font-size:1.25rem}.card p,.card li{color:var(--m)}
+.ic{width:44px;height:44px;color:var(--c1);padding:9px;border-radius:12px;background:rgba(94,240,208,.1);border:1px solid rgba(94,240,208,.25)}
+.price{font-weight:700;color:var(--t);font-size:1.2rem}
+ul.chk{padding-left:0;list-style:none}ul.chk li{padding-left:1.6rem;position:relative;margin:.35rem 0}ul.chk li::before{content:"";position:absolute;left:0;top:.55em;width:.7rem;height:.7rem;border-radius:50%;background:linear-gradient(135deg,var(--c1),var(--c2))}
+.ph{background:rgba(255,200,80,.15);color:#ffd27a;padding:0 .3rem;border-radius:5px}
+.step{display:flex;gap:1rem}.num{flex:0 0 44px;width:44px;height:44px;align-self:flex-start;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#04110f;background:linear-gradient(135deg,var(--c1),var(--c2))}
+footer{border-top:1px solid var(--line);color:var(--m);padding:2rem 0;font-size:.9rem;background:rgba(5,7,13,.6)}footer a{color:var(--t)}
+.note{font-size:.9rem;color:var(--m);margin-top:1.5rem}
+strong{color:var(--t)}
+/* text animations */
+.split .wd{display:inline-block;white-space:nowrap}
+.split .ch{display:inline-block;opacity:0;filter:blur(10px);transform:translateY(.4em);animation:chIn .8s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*18ms)}
+@keyframes chIn{to{opacity:1;filter:blur(0);transform:none}}
+.blur-in{animation:chIn 1s .5s cubic-bezier(.2,.7,.2,1) both}
+.js .reveal{opacity:0;transform:translateY(24px);filter:blur(6px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1),filter .8s}
+.js .reveal.in{opacity:1;transform:none;filter:none}
+@media(min-width:760px){.links{display:flex}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.step{flex-direction:column}.card{padding:2.1rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.split .ch,.blur-in,.js .reveal{opacity:1!important;filter:none!important;transform:none!important}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.card,header{background:rgba(14,18,28,.92)}}
